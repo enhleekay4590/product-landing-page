@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.introduction {
+  width: 100%;
+  height: 80vh;
+  background-image: url(./image/chocolate-one.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+}
+.navbar li {
+  display: inline;
+  padding: 0 13px;
+}
+
+.navbar li a {
+  color: aliceblue;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-weight: 600;
+  margin-right: 2px;
+  font-size: 23px;
+  text-decoration: none;
+  color: aliceblue;
+  font-style: italic;
+}
+.nav-link {
+  transition: 0.7s ease;
+}
+.navbar li a.nav-link:hover {
+  color: rgb(226, 130, 21);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 35px;
+  height: 2px;
+  margin: 6px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: aliceblue;
+}
+
+div.heading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: aliceblue;
+  width: 70%;
+  margin: auto;
+  height: 55vh;
+}
+
+h1.brand-name {
+  font-family: "Pacifico", cursive;
+  font-weight: 700;
+  font-size: 55px;
+  font-style: italic;
+}
+p.slogan {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.sec1 {
+  text-align: center;
+  margin: auto;
+  padding: 3% 0;
+  width: 80%;
+}
+.chef {
+  border-radius: 8px;
+  width: 400px;
+  height: 250px;
+  margin-left: 20px;
+}
+
+.ingredient {
+  background-color: rgba(243, 197, 98, 0.925);
+  padding: 14px 14px;
+}
+
+.flavour {
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
+}
+
+.para {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.images {
+  border-radius: 50px;
+}
+
+.description {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.picture {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 50%;
+}
+h5 {
+  font-style: italic;
+}
+.sub {
+  color: #ffca2c;
+  font-style: italic;
+}
+.comments {
+  font-family: "Sedan", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  text-align: center;
+}
+div.subscribe {
+  background-image: url(/src/image/openart-image_znQkgSGY_1713043054829_raw.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+}
+.sub2 {
+  color: white;
+}
+.para2 {
+  color: white;
+  align-items: center;
+}
+
+footer {
+  background-color: #b1a3a4;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+    transform: rotate(-45deg) translate(-7px, 5px);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-6px, -4px);
+    transform: rotate(45deg) translate(-6px, -4px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #aa9a9a;
+    opacity: 0.9;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+}
